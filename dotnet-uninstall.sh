@@ -53,8 +53,7 @@ Options:
                                  - sdk
                                  - dotnet (Microsoft.NETCore.App)
                                  - aspnetcore (Microsoft.AspNetCore.App)
-                               can be specified multiple times like: 
-                                 $0 -r sdk -r dotnet
+                               can be specified multiple times like: $0 -r sdk -r dotnet
       --install-dir <path>     Custom install directory (default: ~/.dotnet)
       --dry-run                Show matching versions without deleting
   -y, --yes                    Skip confirmation prompt and uninstall directly
