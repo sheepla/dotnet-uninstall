@@ -75,6 +75,13 @@ More Info:
 
 Download this script and grant executable permissions like `chmod +x ./dotnet-uninstall.sh`.
 
+```sh
+curl -sL -o dotnet-uninstall.tar.gz https://github.com/sheepla/dotnet-uninstall/archive/refs/tags/v0.0.1.tar.gz
+tar xf dotnet-uninstall.tar.gz
+cd dotnet-uninstall-0.0.1/
+chmod +x ./dotnet-uninstall.sh
+```
+
 ## See Also
 
 - [dotnet-install scripts reference - Microsoft Docs](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script)
