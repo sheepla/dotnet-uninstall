@@ -11,11 +11,11 @@ LIST_MODE=false
 
 while [[ $# -gt 0 ]]; do
     case "$1" in
-        -v|--version)
+        -v | --version)
             VERSION_PREFIX="$2"
             shift 2
             ;;
-        -r|--runtime)
+        -r | --runtime)
             RUNTIMES+=("$2")
             shift 2
             ;;
@@ -27,16 +27,16 @@ while [[ $# -gt 0 ]]; do
             DRY_RUN=true
             shift
             ;;
-        -y|--yes)
+        -y | --yes)
             AUTO_YES=true
             shift
             ;;
-        -l|--list)
+        -l | --list)
             LIST_MODE=true
             shift
             ;;
-        -h|--help)
-            cat <<EOF
+        -h | --help)
+            cat << EOF
 About:
   $0 - Unofficial uninstall script for Linux installed with dotnet-install.sh
 
@@ -92,7 +92,6 @@ EOF
             ;;
     esac
 done
-
 
 if $LIST_MODE; then
     echo "[sdk]"
@@ -186,8 +185,7 @@ fi
 if ! $AUTO_YES; then
     read -rp "Proceed with deletion? [Y/n] " response
     case "$response" in
-        [Yy][Ee][Ss]|[Yy]|"")
-            ;;
+        [Yy][Ee][Ss] | [Yy] | "") ;;
         *)
             echo "Aborted."
             exit 0
