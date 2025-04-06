@@ -1,19 +1,25 @@
+<div align="center">
+
 # dotnet-uninstall.sh
 
-This script is a tool for bulk removal of specific versions of the .NET SDK/runtime in a Linux environment installed using [dotnet-install.sh](https://github.com/dotnet/install-scripts)
+</div>
 
-As background, while dotnet-install.sh provides a means of installation into the user space that does not use the Linux distribution's package manager, the uninstall tool, dotnet-core-uninstall-tool, still This is because it only supports Windows and macOS and does not yet support Linux.
+This script is an unofficial tool for bulk removal of specific versions of the .NET SDK/runtime in a Linux environment installed using [dotnet-install.sh](https://github.com/dotnet/install-scripts)
+
+As background, while dotnet-install.sh provides a means of installation into the user space e.g. `~/.dotnet` that does not use the Linux distribution's package manager, the uninstall tool [dotnet-core-uninstall-tool](https://github.com/dotnet/cli-lab), still This is because it only supports Windows and macOS and does not yet support Linux.
 
 
-**NOTE**: .NET here is the cross-platform, modern implementation of .NET, formerly called *.NET Core*, as opposed to *Mono* or *.NET Framework.*
+**NOTE**: *.NET* here is the cross-platform, modern implementation of .NET, formerly called *.NET Core*, as opposed to *Mono* or *.NET Framework.*
 
 ## Usage
 
-Basically, it is executed by specifying the version prefix as the argument of the `--version` option.
+Basically, it is executed by specifying the version prefix as the argument of the `--version <prefix>` option.
 This searches the version directory with forward matching, so there is no need to be aware of what the subrevision is.
+
 To check the operation without executing the removal, add the `--dry-run` option.
 In addition, you can omit answering the confirmation message and immediately execute the removal by adding `--yes`.
-You can also run with the `--list` option to check for installed SDKs and runtimes.
+
+You can also run with the `--list` option to check for installed SDKs and runtimes. (You can also check with: `dotnet --list-sdks`, `dotnet --list-runtimes`, `dotnet --info`)
 
 ```
 
