@@ -15,6 +15,7 @@ As background, while dotnet-install.sh provides a means of installation into the
 
 Basically, it is executed by specifying the version prefix as the argument of the `--version <prefix>` option.
 This searches the version directory with forward matching, so there is no need to be aware of what the subrevision is.
+For example, if you have the version `7.0.410` of the SDK installed, you can specify `--version 7.0`.
 
 To check the operation without executing the removal, add the `--dry-run` option.
 In addition, you can omit answering the confirmation message and immediately execute the removal by adding `--yes`.
